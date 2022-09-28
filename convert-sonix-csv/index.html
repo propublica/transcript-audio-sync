@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/main.css" />
+
+    <meta name="theme-color" content="#fafafa" />
+  </head>
+
+  <body>
+    <h1>Process Sonix CSV</h1>
+    <p>
+      Convert a CSV from <a href="https://sonix.ai">Sonix</a> to corresponding
+      HTML and JSON, which can be used in your web application.
+    </p>
+    <main class="app">
+      <div class="inputs">
+        <div class="left">
+          <h2>Sonix CSV</h2>
+          <textarea
+            onclick="this.select()"
+            spellcheck="false"
+            id="input-csv"
+            cols="30"
+            rows="10"
+          ></textarea>
+        </div>
+        <div class="right">
+          <h2>HTML</h2>
+          <textarea
+            onclick="this.select()"
+            spellcheck="false"
+            id="input-html"
+            cols="30"
+            rows="10"
+          ></textarea>
+          <h2>JSON</h2>
+          <textarea
+            onclick="this.select()"
+            spellcheck="false"
+            id="input-json"
+            cols="30"
+            rows="10"
+          ></textarea>
+        </div>
+      </div>
+      <button id="convert">Convert</button>
+    </main>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/d3/7.6.1/d3.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

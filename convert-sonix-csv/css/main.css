@@ -1,0 +1,55 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: MonoLisa, Menlo, Consolas, Monaco, Liberation Mono,
+    Lucida Console, monospace;
+}
+
+body {
+  padding: 15px;
+}
+
+.inputs {
+  display: flex;
+  column-gap: 30px;
+}
+
+.left,
+.right {
+  flex: 1;
+  flex-shrink: 0;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+}
+
+.left textarea {
+  flex: 1;
+}
+
+textarea {
+  width: 100%;
+}
+
+h1 {
+  font-weight: 900;
+}
+
+h2 {
+  font-weight: 500;
+}
+
+button {
+  padding: 12px 20px;
+  margin-top: 18px;
+  background-color: #06aee0;
+  border: none;
+  border-radius: 3px;
+  font-weight: 900;
+}
