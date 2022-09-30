@@ -103,7 +103,9 @@ function convert() {
     .map((row) => {
       var hasPunctuation = !!row.word.match(/[!?.]$/);
       console.log(hasPunctuation);
-      return `<span class="text" data-id="${row.id}">${row.word}</span>${hasPunctuation ? "" : " "}`;
+      return `<span class="word" word-id="${row.id}">${row.word}</span>${
+        hasPunctuation ? " " : " "
+      }`;
     })
     .join("");
 

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Transcript Audio Sync Demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <h1>Transcript Audio Sync Demo</h1>
+    <div class="player">
+      <audio controls id="my-audio" src="audio.mp3">
+        <a href="audio.mp3"> Download audio </a>
+      </audio>
+    </div>
+    <!-- To highlight individual words, we need to wrap each word in a span. However, wrapping words in spans causes screen readers like VoiceOver to read each word individually instead of in a sentence. To create a good experience for all users, we use aria-hidden="true" to hide the transcript with spans, and then we have a screen reader-friendly version of the content below.  -->
+    <div class="transcript" aria-hidden="true">
+      <p class="transcript__text">
+        <span class="word" word-id="0">Please</span>
+        <span class="word" word-id="1">call</span>
+        <span class="word" word-id="2">Stella</span>
+        <span class="word" word-id="3">and</span>
+        <span class="word" word-id="4">ask</span>
+        <span class="word" word-id="5">her</span>
+        <span class="word" word-id="6">to</span>
+        <span class="word" word-id="7">bring</span>
+        <span class="word" word-id="8">these</span>
+        <span class="word" word-id="9">things</span>
+        <span class="word" word-id="10">with</span>
+        <span class="word" word-id="11">her</span>
+        <span class="word" word-id="12">from</span>
+        <span class="word" word-id="13">the</span>
+        <span class="word" word-id="14">store.</span>
+        <span class="word" word-id="15">Six</span>
+        <span class="word" word-id="16">spoons</span>
+        <span class="word" word-id="17">of</span>
+        <span class="word" word-id="18">fresh</span>
+        <span class="word" word-id="19">snow</span>
+        <span class="word" word-id="20">peas.</span>
+        <span class="word" word-id="21">Five</span>
+        <span class="word" word-id="22">thick</span>
+        <span class="word" word-id="23">slabs</span>
+        <span class="word" word-id="24">of</span>
+        <span class="word" word-id="25">blue</span>
+        <span class="word" word-id="26">cheese.</span>
+        <span class="word" word-id="27">And</span>
+        <span class="word" word-id="28">maybe</span>
+        <span class="word" word-id="29">a</span>
+        <span class="word" word-id="30">snack</span>
+        <span class="word" word-id="31">for</span>
+        <span class="word" word-id="32">her</span>
+        <span class="word" word-id="33">brother,</span>
+        <span class="word" word-id="34">Bob.</span>
+        <span class="word" word-id="35">We</span>
+        <span class="word" word-id="36">also</span>
+        <span class="word" word-id="37">need</span>
+        <span class="word" word-id="38">a</span>
+        <span class="word" word-id="39">small</span>
+        <span class="word" word-id="40">plastic</span>
+        <span class="word" word-id="41">snake</span>
+        <span class="word" word-id="42">and</span>
+        <span class="word" word-id="43">a</span>
+        <span class="word" word-id="44">big</span>
+        <span class="word" word-id="45">toy</span>
+        <span class="word" word-id="46">frog</span>
+        <span class="word" word-id="47">for</span>
+        <span class="word" word-id="48">the</span>
+        <span class="word" word-id="49">kids.</span>
+        <span class="word" word-id="50">You</span>
+        <span class="word" word-id="51">can</span>
+        <span class="word" word-id="52">scoop</span>
+        <span class="word" word-id="53">these</span>
+        <span class="word" word-id="54">things</span>
+        <span class="word" word-id="55">into,</span>
+        <span class="word" word-id="56">three</span>
+        <span class="word" word-id="57">red</span>
+        <span class="word" word-id="58">bags.</span>
+        <span class="word" word-id="59">And</span>
+        <span class="word" word-id="60">we</span>
+        <span class="word" word-id="61">will</span>
+        <span class="word" word-id="62">go</span>
+        <span class="word" word-id="63">meet</span>
+        <span class="word" word-id="64">her</span>
+        <span class="word" word-id="65">Wednesday</span>
+        <span class="word" word-id="66">at</span>
+        <span class="word" word-id="67">the</span>
+        <span class="word" word-id="68">train</span>
+        <span class="word" word-id="69">station.</span>
+      </p>
+    </div>
+    <!-- This version of the transcript is for screen readers only is visually hidden -->
+    <div
+      class="transcript-accessibility sr-only"
+      role="region"
+      aria-label="Transcript"
+    >
+      <p>
+        Please call Stella and ask her to bring these things with her from the
+        store. Six spoons of fresh snow peas. Five thick slabs of blue cheese.
+        And maybe a snack for her brother, Bob. We also need a small plastic
+        snake and a big toy frog for the kids. You can scoop these things into,
+        three red bags. And we will go meet her Wednesday at the train station.
+      </p>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>

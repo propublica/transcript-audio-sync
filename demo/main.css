@@ -1,0 +1,43 @@
+/*. word-active is applied to the current word, and is removed from the previous word, as the audio track is played. */
+
+.word-active {
+	font-weight: 900;
+}
+
+/*. The remainder of CSS is for making this page look nice, but is not functionally necessary */
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	padding: 15px;
+	font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui,
+		helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial,
+		sans-serif;
+	line-height: 1.7;
+	font-size: 24px;
+}
+
+h1 {
+	font-weight: 900;
+	font-size: 48px;
+	line-height: 1.2;
+}
+
+.transcript {
+	font-family: Menlo, Consolas, Monaco, Liberation Mono, Lucida Console,
+		monospace;
+}
+
+.sr-only:not(:focus):not(:active) {
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+}
