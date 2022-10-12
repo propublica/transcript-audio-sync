@@ -2,6 +2,8 @@
 
 This demo shows how to match the current progression of an audio element with words on a page to highlight the words are they are spoken. The match uses a JSON representation of each word, along with its start and end time. 
 
+Try it: https://propublica.github.io/transcript-audio-sync/demo/
+
 ## JSON and HTML Audio Representation
 
 The transcript is represented in JSON as an array of words. Each word in the transcript is represented as an object:
