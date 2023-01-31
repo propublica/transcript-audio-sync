@@ -72,13 +72,19 @@ station.,00:00:29.32,00:00:29.98,John`;
 
 document.getElementById("input-csv").value = defaultText;
 
-function timecodeToNumber(timecode) {
+function timecodeToSeconds(timecode) {
   var split = timecode.split(":");
   var hours = Number(split[0]);
   var minutes = Number(split[1]);
   var seconds = Number(split[2]);
-  var time = hours * 3600 + minutes * 60 + seconds;
-  return time;
+
+  // Sonix.ai is inconsistent in how it outputs milliseconds. Sometimes creates timestamps
+  // in 00:00:00:00 format and sometimes in 00:00:00.00 format.
+  var milliseconds = split[3] ? Number(split[3]) / 100 : 0;
+
+  var seconds = hours * 3600 + minutes * 60 + seconds + milliseconds;
+
+  return seconds;
 }
 
 function convert() {
@@ -90,8 +96,8 @@ function convert() {
     return {
       word: value["Word"],
       speaker: value["Speaker"],
-      start: timecodeToNumber(value["Start Timecode"]),
-      end: timecodeToNumber(value["End Timecode"]),
+      start: timecodeToSeconds(value["Start Timecode"]),
+      end: timecodeToSeconds(value["End Timecode"]),
       id: index,
     };
   });
@@ -102,7 +108,6 @@ function convert() {
   var html = finalJson
     .map((row) => {
       var hasPunctuation = !!row.word.match(/[!?.]$/);
-      console.log(hasPunctuation);
       return `<span class="word" word-id="${row.id}">${row.word}</span>${
         hasPunctuation ? " " : " "
       }`;
