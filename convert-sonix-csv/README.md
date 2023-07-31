@@ -6,4 +6,8 @@ Try it: https://propublica.github.io/transcript-audio-sync/convert-sonix-csv/
 
 ## How to use
 
-When viewing a transcript in Sonix, press the export button and select the CSV option. Copy and paste that into the "Sonix CSV" input in this application and press "Convert".
+Create an account on [Sonix](https://sonix.ai/)
+
+Upload an audio file for transcription
+
+When viewing the transcript in Sonix, press the export button and select the CSV option. Copy and paste that into the "Sonix CSV" input in this application and press "Convert".
